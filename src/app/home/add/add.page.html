@@ -1,0 +1,80 @@
+<app-header *ngIf="isNewUser" titulo="Nuevo"></app-header>
+<app-header *ngIf="!isNewUser" titulo="Editar"></app-header>
+
+<ion-content class="ion-padding" color="tertiary">
+  <ion-title class="centerAnita">Formulario</ion-title>
+
+  <form (ngSubmit)="btnSubmit()" [formGroup]="form">
+    <ion-row>
+      <ion-col class="centerAnita">
+        <ion-item>
+          <ion-label>
+            <h2>*Titulo:</h2>
+          </ion-label>
+          <ion-input
+            class="inputAnita"
+            placeholder="Escribir titulo aquí"
+            required
+            name="title"
+            type="text"
+            formControlName="title"
+          ></ion-input>
+        </ion-item>
+        <span
+          class="errorWhite ion-padding"
+          *ngIf="isSubmit && errorControl.title.errors?.required"
+        >
+          El Titulo es requerido.
+        </span>
+      </ion-col>
+      <ion-col size="1"></ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>
+            <h2>Completado:</h2>
+          </ion-label>
+          <ion-checkbox
+            type="checkbox"
+            name="completed"
+            color="primary"
+            id="completed"
+            value="true"
+            formControlName="completed"
+          ></ion-checkbox>
+        </ion-item>
+      </ion-col>
+      <ion-col size="1"></ion-col>
+    </ion-row>
+
+    <ion-row class="centerAnita">
+      <ion-col>
+        <ion-button
+          size="large"
+          type="submit"
+          color="primary"
+          *ngIf="isNewUser"
+        >
+          Guardar
+        </ion-button>
+        <ion-button
+          size="large"
+          type="submit"
+          color="primary"
+          *ngIf="!isNewUser"
+        >
+          Actualizar
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button size="large" color="danger" (click)="btnCancel()">
+          Cancelar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
+
+<app-footer></app-footer>

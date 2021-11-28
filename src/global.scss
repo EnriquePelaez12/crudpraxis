@@ -24,3 +24,380 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+
+
+:root {
+    /** primary **/
+    --ion-color-primaryanita: #ffffff;
+  }
+
+  .ion-color-tertiary {
+    --ion-color-contrast: #ffffff !important;
+  }
+// Animaciones
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.avatar{
+   margin: auto;
+}
+
+.animated.fast {
+    -webkit-animation-duration: 700ms;
+    animation-duration: 700ms;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+//terminan animaciones
+.titulo {
+    width: 100%;
+    font-weight: bold;
+    font-size: 3em;
+    font-weight: 900 !important;
+    font-style: italic !important;
+    color: white;
+}
+
+.centerAnita {
+    align-items: center !important;
+    text-align: center !important;
+}
+
+.btnAnita {
+    --background: #F6A200;
+    --ion-text-color: white !important;
+}
+
+.button-large {
+    height: 4em !important;
+    --padding-start: 3em;
+    --padding-end: 3em;
+    font-size: 16px !important;
+    font-weight: normal !important;
+}
+
+.colorAnita {
+    --ion-background-color: #041589;
+}
+
+.inputAnita {
+    --background: white !important;
+    color: black;
+}
+
+.inputAnitaText{
+  color: white;
+}
+
+.labelAnita {
+    font-size: 1em !important;
+    color: white !important;
+    padding-bottom: 8px !important;
+}
+
+.rojoAnita {
+    --background: #FF0000;
+}
+
+.themeBlue {
+    --background: #041589;
+}
+.themeNight {
+    --background: #495867;
+}
+.themeNeon {
+    --background: #FF5E79;
+}
+.themeAutumn {
+    --background: #B4436C;
+}
+
+.minusculasAnita {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.topAnita {
+    padding-top: 10px;
+}
+
+.bordeSuperior {
+    border-top: 1px solid white;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.bordeDerecha {
+    border-right: 1px solid white;
+}
+
+.botonAnita {
+  --background: var(--ion-color-tertiary);
+  font-weight: bold;
+  --color: white!important;
+  height: 55px;
+  --padding-start: 1.5em;
+  --padding-end: 1.5em;
+}
+
+ion-title {
+    color: white!important;
+}
+
+.btnGris{
+  --background: #9d9d9d !important;
+  --color: black !important;
+}
+
+.anitaPequeno{
+  font-size: 12px !important;
+}
+
+.anitaLink{
+color: blue;
+}
+
+.error{
+  font-size: 0.7em !important;
+  color: #fc2d00 !important;
+}
+
+.errorWhite{
+  font-size: 0.7em !important;
+  color: #F6A200 !important;
+}
+
+.anitaLoading {
+  --background: #222;
+  --spinner-color: #fff;
+  color: #fff;
+}
+
+.colorTexto{
+  --color: black !important;
+}
+
+.optionSelect{
+  --color-checked: white!important;
+}
+
+.anitaSinFondo{
+  background: none!important;
+}
+
+.anitaBlanco{
+  --color: white!important;
+}
+
+ion-icon {
+		color: white;
+}
+
+.anitaPequena{
+  font-size: 10px;
+}
+
+.anitaUsuario{
+  background-color: var(--ion-color-tertiary);
+}
+
+
+.anitaNegrita{
+  font-weight: bold;
+}
+
+p{
+  font-size: 0.9em !important;
+}
+
+.anitaGris{
+    font-size: 12px;
+    color: #969595;
+}
+
+.anitaCitas{
+  background-color: var(--ion-color-primary);
+}
+
+.anitafondoGris{
+  background-color: #cbcbcb;
+}
+
+.anitoBorderTop{
+  border-top: 1px solid white;
+}
+
+.anitoBorderBottom{
+  border-bottom:1px solid white;
+}
+
+.anitoBorderBottomBlack{
+  border-bottom:1px solid;
+  border-color: #5e5e5e;
+}
+
+.textoAnitaCitasGrande{
+  font-size: 18px;
+}
+
+.textoAnitaCitas{
+  font-size: 14px;
+}
+
+.textoAnitaCitasPequeno{
+  font-size: 12px;
+}
+
+.anitaTop{
+  padding-top: 8px;
+}
+
+.anitaButton{
+  padding-bottom: 8px;
+}
+
+.anitaWhite{
+  color: #ffffff;
+}
+
+.anitaRed{
+  color: #d11d0c;
+}
+
+.anitaBlue2{
+  color: #041589;
+}
+
+.anitaFondoSecondary{
+  background-color: var(--ion-color-secondary);
+}
+
+.textoAnitaCitaGrande{
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+.anitaCotizacion{
+  background-color: #c7c8cc;
+  padding-bottom: 5px;
+}
+
+.anitaBlue{
+  color: #088ffe;
+}
+
+.anitaBlue ion-icon {
+  color: #088ffe;
+  font-size: 20px;
+}
+
+.anitaMaterial ion-icon {
+  color: #1b1b1b;
+}
+.cotizaicoon ion-icon {
+  color: #1b1b1b;
+}
+.anitaFondoBlanco{
+  background-color: white;
+}
+
+.anitaTextoGris{
+  color: #a2a2a2;
+  font-size: 18px;
+}
+
+.anitaPadding{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.anitaRojo{
+  color: #ff0101;
+}
+
+.searchbar {
+  --background: #ffffff;
+}
+
+.sinSombra{
+  --box-shadow:none;
+}
+
+.ion-margin-pluss{
+  margin-left: 30px;
+}
+
+.anitaPadding10{
+  padding: 10px;
+}
+
+.ion-miAvatar{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.ion-milabel{
+  margin-left: 30px;
+}
+
+.anitaFlotante{
+  margin-right: 11px;
+}
+
+.comparteTexto{
+  padding-top: -5px;
+}
+
+.top5{
+  padding-top: 5px;
+}
+
+
+.derecha5{
+  padding-right: 5px;
+}
+
+.espacioLeft{
+  margin-left: 20px;
+}
+
+
+.botonFacebook {
+  --background: #3b5998;
+  font-weight: bold;
+  --color: white!important;
+}
+
+.iconFacebook{
+  padding-right: 10px;
+  margin-bottom: 5px;
+}

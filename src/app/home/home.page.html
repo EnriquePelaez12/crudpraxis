@@ -1,20 +1,44 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header titulo="Inicio"></app-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding" color="tertiary">
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="add()" color="secondary">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-card *ngFor="let dato of listDatos" color="light">
+    <ion-card-header style="text-align: center">
+      <ion-card-title>N° {{dato.id}}</ion-card-title>
+      <ion-card-subtitle
+        ><ion-text color="dark">
+          <h5>Titulo: {{ dato.title }}</h5>
+        </ion-text></ion-card-subtitle
+      >
+    </ion-card-header>
+    <ion-card-content>
+      <ion-row>
+        <ion-col size="6">
+          <ion-label> Completado: </ion-label>
+          <ion-checkbox
+            color="danger"
+            [(ngModel)]="dato.completed"
+            disabled="true"
+          ></ion-checkbox>
+        </ion-col>
+        <ion-col>
+          <ion-button color="danger" (click)="removeDato(dato)">
+            <ion-icon name="trash"></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="warning" (click)="showFormEdit(dato)">
+            <ion-icon name="create"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
+
+<app-footer></app-footer>

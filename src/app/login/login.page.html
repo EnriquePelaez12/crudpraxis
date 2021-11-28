@@ -1,0 +1,64 @@
+<ion-content class="animated fadeIn fast" color="tertiary">
+  <ion-grid>
+    <ion-row>
+      <h1 class="titulo ion-text-center">¡Hola!</h1>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3"></ion-col>
+      <ion-col>
+        <ion-img src="assets/img/login.png"></ion-img>
+      </ion-col>
+      <ion-col size="3"></ion-col>
+    </ion-row>
+
+    <form (ngSubmit)="login()" [formGroup]="form">
+
+      <ion-row>
+        <ion-col size="1"></ion-col>
+        <ion-col class="centerAnita">
+          <ion-item color="tertiary">
+            <ion-label class="labelAnita" position="stacked">CORREO ELECTRÓNICO</ion-label>
+            <ion-input class="inputAnita" placeholder="usuario@mail.com" required name="email" type="email"
+              formControlName="correo">
+            </ion-input>
+          </ion-item>
+          <span class="errorWhite ion-padding" *ngIf="isSubmit && errorControl.correo.errors?.required">
+            Correo electrónico es requerido.
+          </span>
+          <span class="errorWhite ion-padding" *ngIf="isSubmit && errorControl.correo.errors?.pattern">
+            Formato de correo electrónico invalido.
+          </span>
+        </ion-col>
+        <ion-col size="1"></ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="1"></ion-col>
+        <ion-col class="centerAnita">
+          <ion-item color="tertiary">
+            <ion-label class="labelAnita" position="stacked">PASSWORD</ion-label>
+            <ion-input class="inputAnita" placeholder="*****" required name="contrasena" type="password"
+              formControlName="contrasena"></ion-input>
+          </ion-item>
+          <span class="errorWhite ion-padding" *ngIf="isSubmit && errorControl.contrasena.errors?.required">
+            Password electrónico es requerido.
+          </span>
+          <span class="errorWhite ion-padding"
+            *ngIf="isSubmit && (errorControl.contrasena.errors?.pattern || errorControl.contrasena.errors?.minlength ||
+            errorControl.contrasena.errors?.maxlength)">
+            Solo se permiten letras, numeros, al menos 6 maximo 10 caracteresel, punto “.” y el guión bajo “_”.
+          </span>
+        </ion-col>
+        <ion-col size="1"></ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="centerAnita">
+          <ion-button size="large" type="submit" color="danger">
+            &nbsp;ENTRAR&nbsp;
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-grid>
+</ion-content>
